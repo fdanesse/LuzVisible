@@ -1,0 +1,104 @@
+/*
+@define-color border rgba(0,0,0, 0.5);
+*/
+
+@define-color green3 #C8E6C9;
+
+
+window {
+    /*
+    background-image: image(@bg_toolbar1);
+    background-color: @bg_toolbar1;
+    color: black;
+    font: 8pt "Comic Sans";
+    font-weight: normal;
+    */
+}
+
+.boxcontainer {
+    background-image: image(rgba(170,170,170, 0.5));
+    background-color: rgba(170,170,170, 0.5);
+    margin: 15px;
+    padding: 10px;
+    border: 0.1em solid gray;
+}
+
+button {
+    border-radius: 5px;
+    border: 0.1em solid black;
+    margin: 3px;
+    padding: 3px;
+}
+
+button:hover {
+    background-image: image(@green3);
+    background-color: @green3;
+    border: 0.1em solid @green3;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.8), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+}
+button:checked {
+    /*
+    background-image: image(@green3);
+    background-color: @green3;
+    border: 0.01em solid black;
+    */
+}
+
+/* Barra de Progreso */
+scale {
+    /*background-image: image(white);
+    background-color: white;*/
+    border-radius: 0;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+/* El icono de la escala https://developer.gnome.org/gtk3/stable/chap-css-overview.html */
+slider {
+    background-image: image(white);
+    background-color: white;
+    outline-style: outset;
+    border: 0.1em solid black;
+    border-radius: 100%;
+}
+/* canal sin reproducir */
+trough {
+    background-image: image(black);
+    background-color: black;
+    outline-style: outset;
+    border: 0.1em solid black;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3), 0 3px 6px 0 rgba(0, 0, 0, 0);
+}
+/* canal reproducido */
+trough highlight{
+    background-image: image(orange);
+    background-color: orange;
+    outline-style: outset;
+    border: 0.1em solid orangered;
+    border-radius: 2px;
+}
+
+.miniview {
+    border-radius: 5px;
+    border: 0.1em solid black;
+    margin: 3px;
+    padding: 3px;
+}
+/*
+@import url("header.css");
+
+def on_button_clicked(self, widget, valid):
+    style_context = widget.get_style_context()
+    if valid:
+        style_context.add_class("bigger")
+    else:
+        style_context.remove_class("bigger")
+
+self.set_css_name('toolbarsalir')
+self.set_name('toolbarsalir')
+
+background-image: -gtk-gradient (linear,left top, left bottom,from (cyan),to (shade (red, 0.95)));
+*/
